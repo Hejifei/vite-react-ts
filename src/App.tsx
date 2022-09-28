@@ -1,10 +1,8 @@
 import reactLogo from './assets/react.svg'
 import './App.css'
 import {useState} from 'react'
-
-const a = 100,
-  x = 233
-var b = 2
+import lodash from 'lodash'
+console.log({lodash})
 
 function App() {
   const [count, setCount] = useState(0)
