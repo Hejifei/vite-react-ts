@@ -169,7 +169,7 @@ module.exports = {
 		"guard-for-in": 0,//for in循环要用if语句过滤
 		"handle-callback-err": 0,//nodejs 处理错误
 		"id-length": 0,//变量名长度
-		"indent": [2, 2],//缩进风格
+		// "indent": [2, 2],//缩进风格
 		"init-declarations": 0,//声明时必须赋初值
 		"key-spacing": [0, { "beforeColon": false, "afterColon": true }],//对象字面量中冒号的前后空格
 		"lines-around-comment": 0,//行前/行后备注
@@ -191,7 +191,7 @@ module.exports = {
 		"prefer-spread": 0,//首选展开运算
 		"prefer-reflect": 0,//首选Reflect的方法
 		"quotes": [1, "single"],//引号类型 `` "" ''
-		"quote-props":[2, "always"],//对象字面量中的属性名是否强制双引号
+		// "quote-props":[2, "always"],//对象字面量中的属性名是否强制双引号
 		"radix": 2,//parseInt必须指定第二个参数
 		"id-match": 0,//命名检测
 		"require-yield": 0,//生成器函数必须有yield
