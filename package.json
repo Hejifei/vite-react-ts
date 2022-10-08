@@ -10,13 +10,15 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
     "localforage": "1.10.0",
     "lodash": "4.17.21",
     "match-sorter": "6.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-redux": "^8.0.4",
     "react-router-dom": "6.4.1",
-    "redux": "^4.2.0",
+    "reselect": "^4.1.6",
     "sort-by": "1.2.0"
   },
   "devDependencies": {
