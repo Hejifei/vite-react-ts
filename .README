@@ -1,1 +1,6 @@
 - yarn dev --mode development
+
+
+- 环境变量
+  - set .env文件
+  - get  import.meta.env

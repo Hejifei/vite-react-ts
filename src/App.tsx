@@ -7,14 +7,9 @@ console.log({lodash})
 
 function App() {
   const [count, setCount] = useState(0)
-  const state: IBaseModel.IState = {
-    isLoading: false,
-  }
 
   console.log({
-    hejifei: window,
-    age: window.age,
-    state,
+    env: import.meta.env,
   })
 
   return (
