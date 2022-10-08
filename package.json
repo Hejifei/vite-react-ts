@@ -2,7 +2,6 @@
   "name": "vite-react-ts",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
@@ -11,7 +10,6 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
-    "dva": "2.4.1",
     "localforage": "1.10.0",
     "lodash": "4.17.21",
     "match-sorter": "6.3.1",
@@ -23,7 +21,6 @@
   "devDependencies": {
     "@babel/core": "7.19.3",
     "@babel/eslint-parser": "7.19.1",
-    "@types/dva": "1.1.0",
     "@types/lodash": "4.14.185",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",

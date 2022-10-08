@@ -5,6 +5,6 @@ module.exports = {
   plugins: [
     postcssPresetEnv({
       importFrom: path.resolve(__dirname, './src/common/variable.css')
-    }),
+    })
   ]
 }

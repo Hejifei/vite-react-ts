@@ -1,7 +1,7 @@
 module.exports = {
   tabWidth: 2,               // 使用2个空格缩进
   semi: false,               // 代码结尾是否加分号
-  trailingComma: 'none',     // 代码末尾不需要逗号
+  trailingComma: 'es5',     // 代码末尾不需要逗号
   singleQuote: true,         // 是否使用单引号
   printWidth: 100,           // 超过多少字符强制换行
   arrowParens: 'avoid',      // 单个参数的箭头函数不加括号 x => x

@@ -26,19 +26,19 @@ const routes: RouteObject[] = [
       children: [
         {
           index: true,
-          element: <div>home</div>
+          element: <div>home</div>,
         },
         {
           path: 'app',
-          element: <App />
-        }
-      ]
+          element: <App />,
+        },
+      ],
       // element: <div>Hellow World</div>
     },
     {
       path: '/login',
-      element: <div>login</div>
-    }
+      element: <div>login</div>,
+    },
   ],
   router = createBrowserRouter(routes)
 
