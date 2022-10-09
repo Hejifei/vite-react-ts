@@ -1,4 +1,5 @@
 import {configureStore} from '@reduxjs/toolkit'
+
 import baseSlice from '@/models/baseSlice'
 
 const store = configureStore({

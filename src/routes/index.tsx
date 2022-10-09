@@ -1,7 +1,9 @@
+import {createBrowserRouter, RouteObject} from 'react-router-dom'
+
 import App from '@/App'
 import Root from '@/layout/index'
+
 import ErrorPage from './error_page'
-import {createBrowserRouter, RouteObject} from 'react-router-dom'
 
 // const Router = () => {
 //   let element = useRoutes([

@@ -1,5 +1,6 @@
-import store from '@/store'
 import {PayloadAction} from '@reduxjs/toolkit'
+
+import store from '@/store'
 
 /**
  * 触发action

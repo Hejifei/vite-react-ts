@@ -1,15 +1,17 @@
-import reactLogo from './assets/react.svg'
 import './App.css'
-import {useCallback, useState, useEffect} from 'react'
+
 import type {FC} from 'react'
+import {useCallback, useEffect, useState} from 'react'
 import {connect} from 'react-redux'
-import styles from './App.module.less'
+
+import {useAppDispatch, useAppSelector} from '@/hooks/redux_hook'
 import {decrement, increment, incrementByAmount} from '@/models/baseSlice'
-import {useAppSelector, useAppDispatch} from '@/hooks/redux_hook'
 import {valueSelector, valueSelector2} from '@/models/baseSlice/selector'
 import {RootState} from '@/store'
 import {dispatchAction} from '@/utils'
 
+import styles from './App.module.less'
+import reactLogo from './assets/react.svg'
 interface IProps {
   value: number
 }

@@ -1,5 +1,6 @@
-import type {RootState} from '@/store'
 import {createSelector} from 'reselect'
+
+import type {RootState} from '@/store'
 
 export const baseSelector = (state: RootState) => state.base
 

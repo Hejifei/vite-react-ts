@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     'eslint:recommended',
@@ -9,28 +9,28 @@ module.exports = {
     // 'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'plugin:react/jsx-runtime',
-    'plugin:import/typescript'
+    'plugin:import/typescript',
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
     createDefaultProgram: true,
-    project: './tsconfig.json'
+    project: './tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'prettier', 'simple-import-sort'],
   settings: {
     react: {
-      version: 'detect'
+      version: 'detect',
     },
     'import/resolver': {
       typescript: true,
-      node: true
-    }
+      node: true,
+    },
   },
   rules: {
     // 'prettier/prettier': 2,
@@ -38,18 +38,18 @@ module.exports = {
       'warn',
       {
         endOfLine: 'auto',
-        singleQuote: true
-      }
+        singleQuote: true,
+      },
     ],
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
       {
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_",
-        "caughtErrorsIgnorePattern": "^_"
-      }
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+      },
     ],
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
@@ -225,6 +225,8 @@ module.exports = {
     'vars-on-top': 2, //var必须放在作用域顶部
     'wrap-iife': [2, 'inside'], //立即执行函数表达式的小括号风格
     'wrap-regex': 0, //正则表达式字面量用小括号包起来
-    yoda: [2, 'never'] //禁止尤达条件
-  }
+    yoda: [2, 'never'], //禁止尤达条件
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+  },
 }
