@@ -11,9 +11,9 @@ import store from '@/store'
 console.log('main')
 
 createRoot(document.getElementById('root') as HTMLElement).render(
-  <Provider store={store}>
-    <StrictMode>
+  <StrictMode>
+    <Provider store={store}>
       <RouterProvider router={router} />
-    </StrictMode>
-  </Provider>
+    </Provider>
+  </StrictMode>
 )
