@@ -4,7 +4,7 @@ import baseSlice from '@/models/baseSlice'
 const store = configureStore({
   reducer: {
     base: baseSlice,
-  }
+  },
 })
 
 export type RootState = ReturnType<typeof store.getState>

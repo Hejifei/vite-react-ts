@@ -1,3 +1,5 @@
+import type {PayloadAction} from '@reduxjs/toolkit'
+
 export default {
   increment: (state: IBaseModel.IState) => {
     state.value += 1
@@ -5,10 +7,10 @@ export default {
   decrement: (state: IBaseModel.IState) => {
     state.value -= 1
   },
-  incrementByAmount: (state: IBaseModel.IState, action: IAction) => {
+  incrementByAmount: (state: IBaseModel.IState, action: PayloadAction<number>) => {
     state.value += action.payload
   },
-  changeLoading: (state: IBaseModel.IState, action: IAction) => {
+  changeLoading: (state: IBaseModel.IState, action: PayloadAction<boolean>) => {
     state.isLoading = action.payload
-  }
+  },
 }

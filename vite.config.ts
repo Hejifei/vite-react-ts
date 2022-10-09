@@ -1,15 +1,15 @@
-import {defineConfig, loadEnv} from 'vite'
+import {ConfigEnv, defineConfig, loadEnv, UserConfig} from 'vite'
 import viteBaseConfig from './vite.base.config'
 import viteDevConfig from './vite.dev.config'
 import viteProdConfig from './vite.prod.config'
 
-const envResolver = {
-  build: () => Object.assign({}, viteBaseConfig, viteProdConfig),
-  serve: () => Object.assign({}, viteBaseConfig, viteDevConfig),
+const envResolver: Record<string, UserConfig | Promise<UserConfig>> = {
+  build: Object.assign({}, viteBaseConfig, viteProdConfig) as UserConfig | Promise<UserConfig>,
+  serve: Object.assign({}, viteBaseConfig, viteDevConfig) as UserConfig | Promise<UserConfig>,
 }
 
 // https://vitejs.dev/config/
-export default defineConfig(({command, mode}) => {
+export default defineConfig(({command, mode}: ConfigEnv) => {
   // console.log('process', process.env)
   console.log(process.cwd())
 
@@ -31,5 +31,5 @@ export default defineConfig(({command, mode}) => {
   const env = loadEnv(mode, process.cwd(), '')
 
   console.log('env///', env)
-  return envResolver[command]()
+  return envResolver[command]
 })
