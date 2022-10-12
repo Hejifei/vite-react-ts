@@ -150,7 +150,7 @@ module.exports = {
     'no-useless-call': 2, //禁止不必要的call和apply
     'no-void': 2, //禁用void操作符
     'no-var': 0, //禁用var，用let和const代替
-    'no-warning-comments': [1, {terms: ['todo', 'fixme', 'xxx'], location: 'start'}], //不能有警告备注
+    // 'no-warning-comments': [1, {terms: ['fixme', 'xxx'], location: 'start'}], //不能有警告备注
     'no-with': 2, //禁用with
 
     'array-bracket-spacing': [2, 'never'], //是否允许非空数组里面有多余的空格
@@ -192,7 +192,7 @@ module.exports = {
     'max-statements': [0, 10], //函数内最多有几个声明
     'new-cap': 2, //函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
     'new-parens': 2, //new时必须加小括号
-    'newline-after-var': 2, //变量声明后是否需要空一行
+    // 'newline-after-var': 0, //变量声明后是否需要空一行
     'object-curly-spacing': [2, 'never'], //大括号内是否允许不必要的空格
     'object-shorthand': 0, //强制对象字面量缩写语法
     'one-var': 0, //连续声明
