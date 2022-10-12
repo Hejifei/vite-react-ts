@@ -1,11 +1,14 @@
 import './App.css'
 
+import {message} from 'antd'
 import type {FC} from 'react'
 import {useCallback, useEffect, useState} from 'react'
 import {connect} from 'react-redux'
 
+import {fetchLogin} from '@/apis/account'
 import {useAppDispatch, useAppSelector} from '@/hooks/redux_hook'
 import {decrement, increment, incrementByAmount} from '@/models/baseSlice'
+import {getList} from '@/models/baseSlice'
 import {valueSelector, valueSelector2} from '@/models/baseSlice/selector'
 import {RootState} from '@/store'
 import {dispatchAction} from '@/utils'
@@ -22,13 +25,35 @@ const App: FC<IProps> = ({value}) => {
   const reduxCount2 = useAppSelector(valueSelector)
   const dispatch = useAppDispatch()
 
-  console.log({
-    value,
-    env: import.meta.env,
-  })
+  // console.log({
+  //   value,
+  //   env: import.meta.env,
+  // })
 
   useEffect(() => {
-    console.log('init')
+    console.log('init', {count})
+    dispatch(getList({currentPage: 2, pageSize: 10}))
+
+    const getInitData = async () => {
+      try {
+        const data = await fetchLogin({
+          account: '18013488032',
+          password: 'gooodwefanfan66',
+        })
+
+        console.log(
+          {
+            data,
+          },
+          'xxxxxx'
+        )
+      } catch (err) {
+        // console.log({err}, 'App页面')
+        message.error(err.message)
+      }
+    }
+
+    getInitData()
   }, [])
 
   const handleIncrement = useCallback(() => {
