@@ -1,6 +1,6 @@
 import './App.css'
 
-import {message} from 'antd'
+import {DatePicker, message} from 'antd'
 import type {FC} from 'react'
 import {useCallback, useEffect, useState} from 'react'
 import {connect} from 'react-redux'
@@ -18,6 +18,8 @@ import reactLogo from './assets/react.svg'
 interface IProps {
   value: number
 }
+
+const {RangePicker} = DatePicker
 
 const App: FC<IProps> = ({value}) => {
   const [count, setCount] = useState(0)
@@ -93,6 +95,7 @@ const App: FC<IProps> = ({value}) => {
         </a>
       </div>
       <h1>Vite + React xx</h1>
+      <RangePicker />
       <div className="card">
         <button onClick={() => setCount(val => val + 1)}>count is {count}</button>
         <p>

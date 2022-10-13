@@ -1,6 +1,7 @@
 import {PayloadAction} from '@reduxjs/toolkit'
 
-import {LOCALSTORAGE_LANGUAGE_ZH, LOCALSTORAGE_X_AUTH_TOKEN} from '@/common'
+import {LOCALSTORAGE_X_AUTH_TOKEN} from '@/common'
+import {LOCALSTORAGE_LANGUAGE_ZH} from '@/common/language'
 import store from '@/store'
 
 /**

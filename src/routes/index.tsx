@@ -1,7 +1,8 @@
 import {createBrowserRouter, RouteObject} from 'react-router-dom'
 
 import App from '@/App'
-import Root from '@/layout/index'
+import Layout from '@/layout/index'
+import Page from '@/views/page'
 
 import ErrorPage from './error_page'
 
@@ -23,7 +24,7 @@ import ErrorPage from './error_page'
 const routes: RouteObject[] = [
     {
       path: '/',
-      element: <Root />,
+      element: <Layout />,
       errorElement: <ErrorPage />,
       children: [
         {
@@ -33,6 +34,10 @@ const routes: RouteObject[] = [
         {
           path: 'app',
           element: <App />,
+        },
+        {
+          path: 'page',
+          element: <Page />,
         },
       ],
       // element: <div>Hellow World</div>

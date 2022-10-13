@@ -16,6 +16,7 @@ interface ILocalstorageLanguageItem {
   name: string
   key: string
   language: string
+  momentLocale: string
 }
 
 /**

@@ -2,8 +2,8 @@ import {message} from 'antd'
 import axios, {AxiosRequestConfig} from 'axios'
 import {set} from 'lodash'
 
-import {LOCALSTORAGE_LANGUAGE_MAP} from '@/common'
 import {ACCESS_CONTROL_ALLOW_ORIGIN, X_AUTH_TOKEN} from '@/common/http'
+import {LOCALSTORAGE_LANGUAGE_MAP} from '@/common/language'
 import {getHeaderAuthToken, getLanguage, logout} from '@/utils'
 
 const cancelToken = axios.CancelToken
