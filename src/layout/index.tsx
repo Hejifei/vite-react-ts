@@ -1,16 +1,19 @@
-import {ConfigProvider, DatePicker} from 'antd'
+import {Button, DatePicker} from 'antd'
 import {get} from 'lodash'
 import moment from 'moment'
-import {ChangeEventHandler, useCallback, useMemo} from 'react'
+import {ChangeEventHandler, useCallback, useContext, useMemo} from 'react'
 import {useTranslation} from 'react-i18next'
 import {Link, Outlet} from 'react-router-dom'
 
 import {i18nConfigProviderMap, LOCALSTORAGE_LANGUAGE_MAP} from '@/common/language'
+import NavBar from '@/components/navBar'
+import {ThemeContext, ThemeContextProvider} from '@/theme/context'
 
 moment.locale('zh-cn')
 
 const Root = () => {
   const {t, i18n} = useTranslation()
+  const themeMode = useContext(ThemeContext)
 
   const changeLanguage: ChangeEventHandler<HTMLSelectElement> = useCallback(e => {
     const value = e.target.value
@@ -22,10 +25,15 @@ const Root = () => {
   const language = i18n.language
   const locale = useMemo(() => i18nConfigProviderMap[language], [language])
 
+  console.log({
+    themeMode,
+  })
   return (
-    <ConfigProvider locale={locale}>
+    <ThemeContextProvider locale={locale}>
+      {/* <ConfigProvider locale={locale} prefixCls={`custom-${themeMode}`}> */}
       <div>
         <header>
+          <NavBar />
           heder
           {t('home.title')}
           <div>
@@ -43,6 +51,11 @@ const Root = () => {
           </div>
         </header>
         <div>
+          <div>
+            <Button type="primary">Primary Button</Button>
+            <Button>Default Button</Button>
+            <Button type="dashed">Dashed Button</Button>
+          </div>
           <div>
             <ul>
               <li>
@@ -66,7 +79,8 @@ const Root = () => {
         </div>
         <footer>footer</footer>
       </div>
-    </ConfigProvider>
+      {/* </ConfigProvider> */}
+    </ThemeContextProvider>
   )
 }
 

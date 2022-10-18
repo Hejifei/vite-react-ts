@@ -30,3 +30,8 @@ interface IError {
   data?: any
   message: string
 }
+
+interface ThemeContextType {
+  mode: string
+  switchMode: (value: string) => void
+}
